@@ -22,13 +22,14 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "./client/dist/"),
     publicPath: "/dist/",
-    filename: "bundle.js"
+		filename: "bundle.js",
   },
   devServer: {
     contentBase: path.join(__dirname, "./client/public/"),
     port: 3001,
     publicPath: "http://localhost:3001/dist/",
-    hotOnly: true
+		hotOnly: true,
+		historyApiFallback: true,
   },
   plugins: [new webpack.HotModuleReplacementPlugin()]
 };
